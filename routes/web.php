@@ -20,3 +20,5 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/tahfidz', [TahfidzController::class, 'index']);
 
 Route::get('/tahfidz/create', [TahfidzController::class, 'create']);
+
+Route::post('/tahfidz', [TahfidzController::class, 'store']);
