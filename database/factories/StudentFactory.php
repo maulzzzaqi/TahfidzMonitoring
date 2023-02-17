@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Student>
  */
-class TahfidzFactory extends Factory
+class StudentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +18,10 @@ class TahfidzFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'surat' => $this->faker->company(),
-            'verse' => $this->faker->address(),
-            'tester' => $this->faker->lastName()
+            'class' => $this->faker->city(),
+            'surah' => $this->faker->company(),
+            'tester' => $this->faker->lastName(),
+            'status' => $this->faker->postcode()
         ];
     }
 }

@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tahfidz extends Model
+class Student extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
-        'surat',
-        'verse',
-        'tester'
+        'class',
+        'surah',
+        'tester',
+        'status'
     ];
 }

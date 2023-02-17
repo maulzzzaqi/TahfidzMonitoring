@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/tahfidz', [TahfidzController::class, 'index']);
+
+Route::get('/tahfidz/create', [TahfidzController::class, 'create']);

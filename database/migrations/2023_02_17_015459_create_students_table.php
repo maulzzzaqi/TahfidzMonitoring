@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tahfidzs', function (Blueprint $table) {
+        Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('surat');
-            $table->string('verse');
+            $table->string('class');
+            $table->string('surah');
             $table->string('tester');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tahfidz');
+        Schema::dropIfExists('students');
     }
 };
