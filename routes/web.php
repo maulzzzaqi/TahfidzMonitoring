@@ -22,3 +22,7 @@ Route::get('/tahfidz', [TahfidzController::class, 'index']);
 Route::get('/tahfidz/create', [TahfidzController::class, 'create']);
 
 Route::post('/tahfidz', [TahfidzController::class, 'store']);
+
+Route::get('/tahfidz/{id}/edit', [TahfidzController::class, 'edit']);
+
+Route::patch('/tahfidz/{id}', [TahfidzController::class, 'update']);

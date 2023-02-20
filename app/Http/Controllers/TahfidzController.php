@@ -35,4 +35,21 @@ class TahfidzController extends Controller
         return redirect('/tahfidz');
     }
 
+    public function edit($id) {
+        $tahfidz = Student::find($id);
+        return view('task.edit', compact('tahfidz'));
+    }
+
+    public function update(TahfidzRequest $request, $id) {
+        $tahfidz = Student::find($id);
+        $tahfidz->update([
+            'name' => $request->name,
+            'class' => $request->class,
+            'surah' => $request->surah,
+            'tester' => $request->tester,
+            'status' => $request->status
+        ]);
+        return redirect('/tahfidz');
+    }
+
 }

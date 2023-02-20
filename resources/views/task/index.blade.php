@@ -17,7 +17,7 @@
             <div class="col-10 mb-1 small">{{$item->status}}</div>
             <div class="group-action">
                 <form action=""" method="POST">
-                    <a href="" class="badge bg-info text-white">edit</a>
+                    <a href="{{ url("tahfidz/$item->id/edit") }}" class="badge bg-info text-white">edit</a>
                     <button type="submit" class="badge bg-danger text-white">delete</button>
                 </form>
             </div>
