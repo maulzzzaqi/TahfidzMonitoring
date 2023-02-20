@@ -60,6 +60,7 @@
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Add</button>
+                <a href="{{ url('/tahfidz') }}" class="btn btn-primary">Cancel</a>
             </form>
         </div>
     </div>

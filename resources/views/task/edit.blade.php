@@ -60,7 +60,8 @@
                     </span>
                     @enderror
                 </div>
-                <button type="update" class="btn btn-primary">Edit</button>
+                <button type="update" class="btn btn-warning">Edit</button>
+                <a href="{{ url('/tahfidz') }}" class="btn btn-primary">Cancel</a>
             </form>
         </div>
     </div>
