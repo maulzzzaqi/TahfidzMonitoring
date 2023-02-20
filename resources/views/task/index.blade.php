@@ -16,9 +16,11 @@
             <div class="col-10 mb-1 small">{{$item->tester}}</div>
             <div class="col-10 mb-1 small">{{$item->status}}</div>
             <div class="group-action">
-                <form action=""" method="POST">
-                    <a href="{{ url("tahfidz/$item->id/edit") }}" class="badge bg-info text-white">edit</a>
-                    <button type="submit" class="badge bg-danger text-white">delete</button>
+                <form action="{{ url("/tahfidz/$item->id") }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <a href="{{ url("tahfidz/$item->id/edit") }}" class="btn btn-info text-white">edit</a>
+                    <button type="submit" class="btn btn-danger text-white">delete</button>
                 </form>
             </div>
         </div>

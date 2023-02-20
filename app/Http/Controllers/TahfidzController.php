@@ -52,4 +52,9 @@ class TahfidzController extends Controller
         return redirect('/tahfidz');
     }
 
+    public function delete($id) {
+        Student::where('id', $id)->delete();
+        return redirect('/tahfidz');
+    }
+
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TahfidzController;
+use App\Http\Requests\TahfidzRequest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::post('/tahfidz', [TahfidzController::class, 'store']);
 Route::get('/tahfidz/{id}/edit', [TahfidzController::class, 'edit']);
 
 Route::patch('/tahfidz/{id}', [TahfidzController::class, 'update']);
+
+Route::delete('/tahfidz/{id}', [TahfidzController::class, 'delete']);
