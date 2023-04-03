@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class TahfidzController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index(Request $request) {
         if ($request -> search){
             $tahfidz = Student::where('name', 'LIKE', "%$request->search%")->get();

@@ -20,12 +20,12 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/tahfidz', [TahfidzController::class, 'index']);
 
-Route::get('/tahfidz/create', [TahfidzController::class, 'create']);
+Route::get('/tahfidz/create', [TahfidzController::class, 'create'])->middleware('is_admin');
 
-Route::post('/tahfidz', [TahfidzController::class, 'store']);
+Route::post('/tahfidz', [TahfidzController::class, 'store'])->middleware('is_admin');
 
-Route::get('/tahfidz/{id}/edit', [TahfidzController::class, 'edit']);
+Route::get('/tahfidz/{id}/edit', [TahfidzController::class, 'edit'])->middleware('is_admin');
 
-Route::patch('/tahfidz/{id}', [TahfidzController::class, 'update']);
+Route::patch('/tahfidz/{id}', [TahfidzController::class, 'update'])->middleware('is_admin');
 
-Route::delete('/tahfidz/{id}', [TahfidzController::class, 'delete']);
+Route::delete('/tahfidz/{id}', [TahfidzController::class, 'delete'])->middleware('is_admin');
