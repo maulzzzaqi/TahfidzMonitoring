@@ -5,11 +5,15 @@
                 <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
             </ul>
             <div class="text-end">
-                <a href="" type="button" class="btn btn-outline-light me-2">Login</a>
-                <a href="" type="button" class="btn btn-warning">Sign-up</a>
-                {{-- <a href="" type="button" class="btn btn-danger"></a>
-                <form action="" id="logout-form" method="POST">
-                </form> --}}
+                @guest
+                <a href="{{ route('login') }}" type="button" class="btn btn-outline-light me-2">Login</a>
+                <a href="{{ route('register') }}" type="button" class="btn btn-warning">Sign-up</a>
+                @else
+                <a href="{{ route('logout') }}" class="btn btn-danger me-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout of {{ Auth::user()->name }}</a>
+                <form action="{{ route('logout') }}" id="logout-form" method="POST">
+                    @csrf
+                </form>
+                @endguest
             </div>
         </div>
     </div>

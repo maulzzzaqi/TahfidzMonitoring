@@ -14,7 +14,7 @@ class TahfidzController extends Controller
             return $tahfidz;
         }
 
-        $tahfidz = Student::paginate(5);
+        $tahfidz = Student::paginate(3);
         return view('task.index', [
             'data' => $tahfidz
         ]);
