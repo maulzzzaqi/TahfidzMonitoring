@@ -11,12 +11,12 @@
     </div>
     @endif
     <div class="card">
-        <div class="card-body">
+        <div class="card card-body bg-gray-100 drop-shadow-lg">
             <form action="{{ route('register') }}" method="POST">
                 @csrf
                 <div class="mb-3">
-                    <label for="" class="form-label">Name</label>
-                    <input name="name" type="text" class="form-control" value="{{ old('name') }}">
+                    <label for="" class="font-medium">Name</label>
+                    <input name="name" type="text" class="input input-bordered w-full max-w-xs mt-2" value="{{ old('name') }}">
                     @error('name')
                     <span class="text-danger">
                         {{ $message }}
@@ -25,7 +25,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Email</label>
-                    <input name="email" type="email" class="form-control" value="{{ old('email') }}">
+                    <input name="email" type="email" class="input input-bordered w-full max-w-xs mt-2" value="{{ old('email') }}">
                     @error('email')
                     <span class="text-danger">
                         {{ $message }}
@@ -34,7 +34,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Password</label>
-                    <input name="password" type="password" class="form-control" value="{{ old('password') }}">
+                    <input name="password" type="password" class="input input-bordered w-full max-w-xs mt-2" value="{{ old('password') }}">
                     @error('password')
                     <span class="text-danger">
                         {{ $message }}
@@ -43,9 +43,9 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Confirm Password</label>
-                    <input name="password_confirmation" type="password" class="form-control">
+                    <input name="password_confirmation" type="password" class="input input-bordered w-full max-w-xs mt-2">
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-success mt-3">Register</button>
             </form>
         </div>
     </div>

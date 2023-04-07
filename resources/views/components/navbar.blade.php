@@ -1,20 +1,29 @@
-<header class="p-3 bg-dark text-white">
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-            </ul>
-            <div class="text-end">
-                @guest
-                <a href="{{ route('login') }}" type="button" class="btn btn-outline-light me-2">Login</a>
-                <a href="{{ route('register') }}" type="button" class="btn btn-warning">Sign-up</a>
-                @else
-                <a href="{{ route('logout') }}" class="btn btn-danger me-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout of {{ Auth::user()->name }}</a>
+<div class="navbar bg-green-600">
+    <div class="flex-1">
+        <a href="{{ url('/') }}" class="btn btn-ghost normal-case text-white text-xl">TahfidzManagement</a>
+    </div>
+    @guest
+    <div class="flex-none gap-2">
+        <a href="{{ route('login') }}"><button class="btn btn-outline text-white">Login</button></a>
+        <a href="{{ route('register') }}"><button class="btn btn-outline text-white">Register</button></a>
+    </div>
+    @else
+    <div class="flex-none gap-2">
+        <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" />
+                </div>
+            </label>
+            <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                <li><a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                </li>
                 <form action="{{ route('logout') }}" id="logout-form" method="POST">
                     @csrf
                 </form>
-                @endguest
-            </div>
+            </ul>
         </div>
     </div>
-</header>
+    @endguest
+</div>

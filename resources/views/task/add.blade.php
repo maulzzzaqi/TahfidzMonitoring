@@ -11,12 +11,12 @@
     </div>
     @endif --}}
     <div class="card">
-        <div class="card-body">
+        <div class="card card-body bg-gray-100 drop-shadow-lg">
             <form action="{{ url('/tahfidz') }}" method="POST">
                 @csrf
                 <div class="mb-3">
-                    <label for="" class="form-label">Name</label>
-                    <input name="name" type="text" class="form-control" value="{{ old('name') }}">
+                    <label for="" class="font-medium">Name</label>
+                    <input name="name" type="text" class="input input-bordered w-full max-w-xs mt-2" value="{{ old('name') }}">
                     @error('name')
                     <span class="text-danger">
                         {{ $message }}
@@ -24,8 +24,8 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Class</label>
-                    <textarea name="class" class="form-control" id="" rows="3">{{ old('class') }}</textarea>
+                    <label for="" class="font-medium">Class</label>
+                    <textarea name="class" class="input input-bordered w-full max-w-xs mt-2" id="" rows="3">{{ old('class') }}</textarea>
                     @error('class')
                     <span class="text-danger">
                         {{ $message }}
@@ -33,8 +33,8 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Surah</label>
-                    <textarea name="surah" class="form-control" id="" rows="3">{{ old('surah') }}</textarea>
+                    <label for="" class="font-medium">Surah</label>
+                    <textarea name="surah" class="input input-bordered w-full max-w-xs mt-2" id="" rows="3">{{ old('surah') }}</textarea>
                     @error('surah')
                     <span class="text-danger">
                         {{ $message }}
@@ -42,8 +42,8 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Tester</label>
-                    <textarea name="tester" class="form-control" id="" rows="3">{{ old('tester') }}</textarea>
+                    <label for="" class="font-medium">Tester</label>
+                    <textarea name="tester" class="input input-bordered w-full max-w-xs mt-2" id="" rows="3">{{ old('tester') }}</textarea>
                     @error('tester')
                     <span class="text-danger">
                         {{ $message }}
@@ -51,16 +51,20 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Status</label>
-                    <textarea name="status" class="form-control" id="" rows="3">{{ old('status') }}</textarea>
+                    <label for="" class="font-medium">Status</label>
+                    <select class="select select-bordered w-full max-w-xs" id="grid-state" name="status">
+                        <option>{{old('status')}}</option>
+                        <option>Lancar</option>
+                        <option>Tidak Lancar</option>
+                    </select>                    
                     @error('status')
                     <span class="text-danger">
                         {{ $message }}
                     </span>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-primary">Add</button>
-                <a href="{{ url('/tahfidz') }}" class="btn btn-primary">Cancel</a>
+                <button type="submit" class="btn btn-outline btn-info">Add</button>
+                <a href="{{ url('/tahfidz') }}" class="btn btn-outline btn-success">Cancel</a>
             </form>
         </div>
     </div>

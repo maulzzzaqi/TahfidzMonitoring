@@ -1,13 +1,21 @@
 @extends('layouts.app')
 @section('main')
-<div class="border rounded mt-5 mx-auto d-flex flex-column align-items-stretch bg-white" style="width: 500px;">
-    <div class="d-flex justify-content-between flex-shrink-0 p-3 link-dark border-bottom">
-        @if (Auth::user())
-        <span class="fs-5 text-center fw-semibold">Welcome to Task Management, {{ Auth::user()->name }}!</span>
-        <span class="btn btn-sm btn-primary">Add</span>
-        @else
-        <span class="fs-5 text-center fw-semibold">Welcome to Task Management!</span>
-        @endif
+<div class="flex justify-center mt-52">
+    <div class="card w-2/6 bg-base-100 shadow-xl">
+        <div class="card-body">
+            @if (Auth::user())
+            <h2 class="font-medium text-2xl text-center">Welcome to the TahfidzManagement, {{ Auth::user()->name }}!
+            </h2>
+            <p class="text-center">Start managing tahfidz now.</p>
+            <center><a href="{{ url('/tahfidz') }}"><button class="btn btn-success mt-5 w-2/6 flex justify-center">Input Tahfidz</button></a></center>
+            @else
+            <h2 class="font-medium text-2xl text-center">Welcome to the TahfidzManagement!</h2>
+            <p class="text-center"></p>
+            <div class="flex justify-center">
+                <a href="{{ url('/tahfidz') }}" class="btn btn-success mt-3 mx-3 w-2/6">See Tahfidz Data</a>
+            </div>
+            @endif
+        </div>
     </div>
 </div>
 @endsection
