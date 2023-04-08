@@ -1,6 +1,6 @@
 <div class="navbar bg-green-600">
     <div class="flex-1">
-        <a href="{{ url('/') }}" class="btn btn-ghost normal-case text-white text-xl">TahfidzManagement</a>
+        <a href="{{ url('/') }}" class="btn btn-ghost normal-case text-white text-xl">TahfidzMonitoring</a>
     </div>
     @guest
     <div class="flex-none gap-2">

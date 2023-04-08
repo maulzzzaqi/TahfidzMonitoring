@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         
-    <title>TahfidzManagement</title>
+    <title>TahfidzMonitoring</title>
     <link rel="icon" href="https://img.freepik.com/premium-vector/al-quran-logo-icon-vector_443394-231.jpg" type="image/icon" href="">
 
     <style>
